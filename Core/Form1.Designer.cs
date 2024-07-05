@@ -11,6 +11,7 @@
         private System.Windows.Forms.Label labelNewValue;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.SplitContainer splitContainer;
+        private System.Windows.Forms.Button buttonBrowse;
 
         protected override void Dispose(bool disposing)
         {
@@ -31,88 +32,101 @@
             this.labelNewValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.buttonBrowse = new System.Windows.Forms.Button();
+
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // tableLayoutPanel
             // 
             this.tableLayoutPanel.ColumnCount = 2;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.Controls.Add(this.labelOldValues, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.textBoxOldValues, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.labelNewValue, 0, 1);
-            this.tableLayoutPanel.Controls.Add(this.textBoxNewValue, 1, 1);
-            this.tableLayoutPanel.Controls.Add(this.splitContainer, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.labelOldValues, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.textBoxOldValues, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.labelNewValue, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.textBoxNewValue, 1, 2);
+            this.tableLayoutPanel.Controls.Add(this.splitContainer, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.buttonBrowse, 0, 0);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 3;
+            this.tableLayoutPanel.RowCount = 4;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel.TabIndex = 0;
+
             // 
             // labelOldValues
             // 
             this.labelOldValues.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelOldValues.AutoSize = true;
-            this.labelOldValues.Location = new System.Drawing.Point(18, 7);
+            this.labelOldValues.Location = new System.Drawing.Point(18, 37);
             this.labelOldValues.Name = "labelOldValues";
             this.labelOldValues.Size = new System.Drawing.Size(59, 17);
             this.labelOldValues.TabIndex = 0;
             this.labelOldValues.Text = "Old Values";
+
             // 
             // textBoxOldValues
             // 
             this.textBoxOldValues.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOldValues.Location = new System.Drawing.Point(83, 4);
+            this.textBoxOldValues.Location = new System.Drawing.Point(83, 34);
             this.textBoxOldValues.Name = "textBoxOldValues";
             this.textBoxOldValues.Size = new System.Drawing.Size(714, 22);
             this.textBoxOldValues.TabIndex = 1;
             this.textBoxOldValues.Text = "https://statements.innovamat.com;https://locutions.innovamat.com";
+
             // 
             // labelNewValue
             // 
             this.labelNewValue.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelNewValue.AutoSize = true;
-            this.labelNewValue.Location = new System.Drawing.Point(12, 37);
+            this.labelNewValue.Location = new System.Drawing.Point(12, 67); 
             this.labelNewValue.Name = "labelNewValue";
             this.labelNewValue.Size = new System.Drawing.Size(65, 17);
             this.labelNewValue.TabIndex = 2;
             this.labelNewValue.Text = "New Value";
+
             // 
             // textBoxNewValue
             // 
             this.textBoxNewValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNewValue.Location = new System.Drawing.Point(83, 34);
+            this.textBoxNewValue.Location = new System.Drawing.Point(83, 64); 
             this.textBoxNewValue.Name = "textBoxNewValue";
             this.textBoxNewValue.Size = new System.Drawing.Size(714, 22);
             this.textBoxNewValue.TabIndex = 3;
             this.textBoxNewValue.Text = "http://localhost:8000";
+
             // 
             // splitContainer
             // 
             this.tableLayoutPanel.SetColumnSpan(this.splitContainer, 2);
             this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer.Location = new System.Drawing.Point(3, 63);
-            this.splitContainer.Name = "splitContainer";
+            this.splitContainer.Location = new System.Drawing.Point(3, 93);
+            this.splitContainer.Name = "splitContainer";    
             this.splitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+
             // 
             // splitContainer.Panel1
             // 
             this.splitContainer.Panel1.Controls.Add(this.textBoxMergeJson);
+
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.textBoxFinalJson);
-            this.splitContainer.Size = new System.Drawing.Size(794, 384);
+            this.splitContainer.Size = new System.Drawing.Size(794, 354);
             this.splitContainer.SplitterDistance = 128;
             this.splitContainer.TabIndex = 4;
+
             // 
             // textBoxMergeJson
             // 
@@ -120,15 +134,17 @@
             this.textBoxMergeJson.Location = new System.Drawing.Point(0, 0);
             this.textBoxMergeJson.Multiline = true;
             this.textBoxMergeJson.Name = "textBoxMergeJson";
-            this.textBoxMergeJson.ScrollBars = RichTextBoxScrollBars.Vertical;
+            this.textBoxMergeJson.ScrollBars = RichTextBoxScrollBars.Both;
             this.textBoxMergeJson.Size = new System.Drawing.Size(794, 128);
             this.textBoxMergeJson.TabIndex = 5;
+            this.textBoxFinalJson.WordWrap  = false;
             this.textBoxMergeJson.Text = """
                                          {
                                            "interface": "Navigable",
                                            "session" : "Quiz"
                                          }
                                          """;
+
             // 
             // textBoxFinalJson
             // 
@@ -136,10 +152,23 @@
             this.textBoxFinalJson.Location = new System.Drawing.Point(0, 0);
             this.textBoxFinalJson.Multiline = true;
             this.textBoxFinalJson.Name = "textBoxFinalJson";
-            this.textBoxFinalJson.ScrollBars = RichTextBoxScrollBars.Vertical ;
+            this.textBoxFinalJson.ScrollBars = RichTextBoxScrollBars.Both;
             this.textBoxFinalJson.Size = new System.Drawing.Size(794, 252);
             this.textBoxFinalJson.TabIndex = 6;
             this.textBoxFinalJson.DetectUrls = true;
+            this.textBoxFinalJson.WordWrap  = false;
+
+            // 
+            // buttonBrowse
+            // 
+            this.buttonBrowse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonBrowse.Location = new System.Drawing.Point(3, 3);
+            this.buttonBrowse.Name = "buttonBrowse";
+            this.buttonBrowse.Size = new System.Drawing.Size(74, 24);
+            this.buttonBrowse.TabIndex = 7;
+            this.buttonBrowse.Text = "Browse";
+            this.buttonBrowse.UseVisualStyleBackColor = true;
+
             // 
             // Form1
             // 
@@ -148,7 +177,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "Form1";
-            this.Text = "JSON Drag and Drop";
+            this.Text = "JSON Utilities";
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel1.PerformLayout();
             this.splitContainer.Panel2.ResumeLayout(false);
@@ -158,7 +187,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
-        
+
 
     }
 }

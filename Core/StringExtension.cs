@@ -8,19 +8,19 @@ public static class StringExtension
         {
             return text;
         }
-        
+
         if (string.IsNullOrEmpty(newValue))
         {
             return text;
         }
-        
+
         foreach (string oldValue in oldValues)
         {
             if (string.IsNullOrEmpty(oldValue))
             {
                 continue;
             }
-            
+
             text = text.Replace(oldValue, newValue);
         }
 
